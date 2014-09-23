@@ -1,4 +1,5 @@
 import json
+import math
 # get prediction given mvId, userID
 # mvID and userID are strs
 def getPredictRating(mvID,userID):
@@ -7,7 +8,7 @@ def getPredictRating(mvID,userID):
     #movieCache = open(os.listdir(/u/prat0318/netflix-tests/ctd446-movieAverageRating.txt))
     movieCacheDic = json.load(open(os.listdir(/u/prat0318/netflix-tests/ctd446-movieAverageRating.txt),'r'))
 
-    cacheUser = open(os.listdir(/u/prat0318/netflix-tests/savant-cacheUsers.txt))
+    #cacheUser = open(os.listdir(/u/prat0318/netflix-tests/savant-cacheUsers.txt))
     userCacheFile = json.load(open(os.listdir(/u/prat0318/netflix-tests/ctd446-userAverageRating.txt),'r'))
     userCacheDic = {}
     for line in inFile:
@@ -59,6 +60,8 @@ def rmse(a,p):
     z = zip(a,p)
     for x,y in z:
         sum += (x-y)**2
+    return math.sqrt(sum)
+    
         #sum += (lambda x,y:((x-y)**2),(a,p))
 
 
