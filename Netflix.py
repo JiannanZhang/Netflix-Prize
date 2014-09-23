@@ -4,11 +4,11 @@ import jason
 def getPredictRating(mvID,userID):
     #cacheList = os.listdir(/u/prat0318/netflix-tests/)
     # caches are dics
-    movieCache = open(os.listdir(/u/prat0318/netflix-tests/mjh3664movie.txt))
-    movieCacheDic = json.load(open('cacheMovie','r'))
+    #movieCache = open(os.listdir(/u/prat0318/netflix-tests/ctd446-movieAverageRating.txt))
+    movieCacheDic = json.load(open(os.listdir(/u/prat0318/netflix-tests/ctd446-movieAverageRating.txt),'r'))
 
     cacheUser = open(os.listdir(/u/prat0318/netflix-tests/savant-cacheUsers.txt))
-    userCacheFile = open('os.listdir(/u/prat0318/netflix-tests/savant-cacheUsers.txt)','r')
+    userCacheFile = json.load(open(os.listdir(/u/prat0318/netflix-tests/ctd446-userAverageRating.txt),'r'))
     userCacheDic = {}
     for line in inFile:
         line = line.split()
