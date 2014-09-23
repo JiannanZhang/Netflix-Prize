@@ -1,4 +1,4 @@
-import jason
+import json
 # get prediction given mvId, userID
 # mvID and userID are strs
 def getPredictRating(mvID,userID):
@@ -51,6 +51,15 @@ def getAveAllUsers(cacheUserFile):
         times += 1
         sumRating += stList[1]
     return sumRating / times
+    
+    
+    
+def rmse(a,p):
+    sum = 0
+    z = zip(a,p)
+    for x,y in z:
+        sum += (x-y)**2
+        #sum += (lambda x,y:((x-y)**2),(a,p))
 
 
 
