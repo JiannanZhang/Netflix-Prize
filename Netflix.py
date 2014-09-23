@@ -1,20 +1,21 @@
-import jason
+import json
 # get prediction given mvId, userID
 # mvID and userID are strs
 def getPredictRating(mvID,userID):
     #cacheList = os.listdir(/u/prat0318/netflix-tests/)
     # caches are dics
     #movieCache = open(os.listdir(/u/prat0318/netflix-tests/ctd446-movieAverageRating.txt))
-    movieCacheDic = json.load(open(os.listdir(/u/prat0318/netflix-tests/ctd446-movieAverageRating.txt),'r'))
+    movieCacheDic = json.load(open('/u/prat0318/netflix-tests/ctd446-movieAverageRating.txt','r'))
 
-    cacheUser = open(os.listdir(/u/prat0318/netflix-tests/savant-cacheUsers.txt))
-    userCacheFile = json.load(open(os.listdir(/u/prat0318/netflix-tests/ctd446-userAverageRating.txt),'r'))
-    userCacheDic = {}
+    #cacheUser = open(os.listdir(/u/prat0318/netflix-tests/savant-cacheUsers.txt))
+    userCacheDic = json.load(open('/u/prat0318/netflix-tests/ctd446-userAverageRating.txt)','r'))
+    '''
     for line in inFile:
         line = line.split()
         userCacheDic[line[0]] = line[1]
+    '''    
 
-    AveAllUsers = getAveAllUsers(userCacheFile)
+    AveAllUsers = getAveAllUsers(userCacheDic)
     # movieOff and userOff
     movieOff = movieCacheDic[mvID] - AveAllUsers
     userOff = userCacheDic[userID] - AveAllUsers
@@ -25,14 +26,16 @@ def getPredictRating(mvID,userID):
 
 #plan 1
 def netflixEval(r,w):
+    mvIDEval = 0
     for line in r:
         # first check it is not : in order to go to else clasue to record the id
         if (line[-1] != ':'):
-            predictRat = getPredictRating(mvID,line)
+            userIDEval = line
+            predictRat = getPredictRating(mvIDEval,userIDEval)
             w.write(predictRat)
         # record id and then loop each user
         else:
-            mvID = line[:-1]
+            mvIDEval = line[:-1]
             w.write(line)
 
 
