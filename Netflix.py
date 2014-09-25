@@ -1,6 +1,4 @@
 import json
-# from rmse import main
-#import rmse
 # get prediction given mvId, userID
 # mvID and userID are strs
 userCacheDic = json.load(open('/u/prat0318/netflix-tests/ctd446-userAverageRating.txt','r'))
@@ -17,9 +15,6 @@ AveAllUsers = getAveAllUsers(userCacheDic)
 
 
 def getPredictRating(mvID,userID):
-    #cacheList = os.listdir(/u/prat0318/netflix-tests/)
-    #movieCache = open(os.listdir(/u/prat0318/netflix-tests/ctd446-movieAverageRating.txt))
-
     # movieOff and userOff
     movieOff = float(movieCacheDic[mvID]) - AveAllUsers
     userOff = float(userCacheDic[userID]) - AveAllUsers
@@ -42,17 +37,81 @@ def netflixEval(r,w):
         else:
             userIDEval = line
             predictRat = getPredictRating(mvIDEval,userIDEval)
-            w.write(str(predictRat) + '\n')
+            w.write(str("%.1f" % predictRat) + '\n')
 
-#if __name__ == '__main__':
-    #rmse.main()
+    # the code below is to find the rmse
+    # 1 fist the realRatDic
+    realRatDic = {}
+    rrText = open("/u/prat0318/netflix-tests/cct667-ProbeCacheAnswers.txt","r") #contains the movies, and all the real ratings each user gave for the movies
+    for line in rrText:
+        lineList = line.split() #[4447,121331,2]
+        valueList = []
+        sublist = []    #will contain the userID and the rating (convert to interger) given
+        sublist.append(lineList[1])
+        sublist.append(int(lineList[2]))
+        if lineList[0] not in realRatDic:   #movie not yet in cache, so add the movieID as a new key and append the user and rating
+            valueList.append(sublist)
+            realRatDic[lineList[0]] = valueList
+        else:
+            realRatDic[lineList[0]].append(sublist) #movie key already exists in cache, just add another user and rating
 
-# plan2 find the offsets for movies and users
-# two offsets one is for movie the other is for user
-# for the movie
-# movieOff = aveMovieRat - aveAllUserating
+    # creat two lists one is actural the other is predict
+    # remember to open it again !!!!!!! otherwise list wil be empty
+    rrText.close()
+    rrText = open("/u/prat0318/netflix-tests/cct667-ProbeCacheAnswers.txt","r")
+    aRList = []
+    pRlist = []
+    for line in rrText:
+        lineList = line.split()
+        aRList.append(lineList[2])  #gets actual rating
+    #find specific movie and user to get specific predicted rating
+        movieID = lineList[0]
+        userID = lineList[1]
+        pRlist.append(getPredictRating(movieID,userID))
+    total = 0
+    z = zip(aRList,pRlist)
+    for x,y in z:
+        total += (float(x)-float(y))**2
+    rmse = (total / len(aRList))  ** 0.5
+    return rmse
 
-# first find the averating for all users
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
