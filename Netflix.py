@@ -10,9 +10,8 @@ def getAveAllUsers(userCacheDic):
     for key in userCacheDic:
         sumRating += float(userCacheDic[key])
     return sumRating / length
-# get global aveRat for all users
+# get global aveRat for all users : 3.6741013034524457
 AveAllUsers = getAveAllUsers(userCacheDic)
-
 
 def getPredictRating(mvID,userID):
     # movieOff and userOff
