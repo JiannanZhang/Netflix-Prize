@@ -1,0 +1,88 @@
+commit fa7be7e04d06fc422b9ec6156c76a2676fc5fb08
+Author: Jiannan Zhang <jz1992@cs.utexas.edu>
+Date:   Thu Sep 25 16:52:28 2014 -0500
+
+    delete some comments
+
+commit 7a273843cec3570d7e3fa34a28b4a8d419a0e2a8
+Author: Jiannan Zhang <jz1992@cs.utexas.edu>
+Date:   Wed Sep 24 20:32:23 2014 -0500
+
+    add pydoc
+
+commit a2ea8efd136e7276b13954316c36b341014dd6d8
+Author: Jeffrey Zhang <jiannanzhang1992@gmail.com>
+Date:   Wed Sep 24 20:23:10 2014 -0500
+
+    Delete .goutputstream-CJ0LMX
+
+commit ed0a55a1c7b09bf56e6cbf3d64814b7902c75c9d
+Author: Jiannan Zhang <jz1992@cs.utexas.edu>
+Date:   Wed Sep 24 20:21:58 2014 -0500
+
+    fixed bugs and add acceptence test
+
+commit e2be3adcfc217ee51e3d1fdea6e74e8a4a048226
+Author: Jiannan Zhang <jz1992@cs.utexas.edu>
+Date:   Tue Sep 23 23:36:30 2014 -0500
+
+    fixed the bugs and add some other files
+
+commit 334b4e4ff2b5a98e92cf3a531d886f9fd2462465
+Author: Jiannan Zhang <jz1992@cs.utexas.edu>
+Date:   Tue Sep 23 22:37:15 2014 -0500
+
+    fixed the bug and run well
+
+commit 13b831b8f201ac7c3d9ecbbb915ee01d93d0fe46
+Author: Jiannan Zhang <jz1992@cs.utexas.edu>
+Date:   Tue Sep 23 21:31:59 2014 -0500
+
+    works right now
+
+commit 8af68452cf4c9402b0fd4d31ffc05bb9cc8b1b22
+Merge: 33184d2 2ce7f23
+Author: Jiannan Zhang <jz1992@cs.utexas.edu>
+Date:   Mon Sep 22 23:18:09 2014 -0500
+
+    fix bugs in Netflix.py
+
+commit 33184d22def5c7f5a5ed1cd171be36adca8e623d
+Author: Jiannan Zhang <jz1992@cs.utexas.edu>
+Date:   Mon Sep 22 23:09:54 2014 -0500
+
+    fix bugs in Netflix.py
+
+commit 2ce7f23ddaf32cbde7f360cb024cfa8eee8fadbb
+Author: Belinda Jiang <belindajiang@utexas.edu>
+Date:   Mon Sep 22 21:26:24 2014 -0500
+
+    still better RMSE
+    
+    Forgot to take the square root; imported math
+
+commit e3639abb0a20d2934af1ae43545624840b15af29
+Author: Belinda Jiang <belindajiang@utexas.edu>
+Date:   Mon Sep 22 21:23:25 2014 -0500
+
+    testing RMSE
+    
+    Test the first form of RMSE to see if it works, may use lambda for optimization
+
+commit b38b80eafc05045341f139531623b700dc894992
+Author: Jiannan Zhang <jz1992@cs.utexas.edu>
+Date:   Mon Sep 22 21:14:12 2014 -0500
+
+    update the path
+
+commit 2f6f5c58086d575bc29b76c186ae30af842659b1
+Author: Jeffrey Zhang <jiannanzhang1992@gmail.com>
+Date:   Sun Sep 21 22:59:10 2014 -0500
+
+    first commmit
+
+commit 708a94bc57e59fe07052274b362abb2c41fc6bb1
+Author: Jeffrey Zhang <jiannanzhang1992@gmail.com>
+Date:   Tue Sep 16 20:58:38 2014 -0500
+
+    Initial commit
