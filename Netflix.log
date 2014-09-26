@@ -1,3 +1,45 @@
+commit 07ddd6a71b9e3ad1a248394e24d7e3f2e74975e0
+Author: Jeffrey Zhang <jiannanzhang1992@gmail.com>
+Date:   Thu Sep 25 19:00:49 2014 -0500
+
+    Delete jz7674-TestNetflix.py
+
+commit 911bf475afa6c83f2071b46deb0587c3e1b2ff5b
+Author: Jeffrey Zhang <jiannanzhang1992@gmail.com>
+Date:   Thu Sep 25 19:00:42 2014 -0500
+
+    Delete jz7674-TestNetflix.out
+
+commit 7749cea9e465f35ee3657ea03ff4da589c7e16a1
+Author: Jeffrey Zhang <jiannanzhang1992@gmail.com>
+Date:   Thu Sep 25 19:00:35 2014 -0500
+
+    Delete jz7674-RunNetflix.out
+
+commit 66e80d49564f5cc10126074c88c12d662b216a0a
+Author: Jeffrey Zhang <jiannanzhang1992@gmail.com>
+Date:   Thu Sep 25 18:58:59 2014 -0500
+
+    Delete jz7674-RunNetflix.in
+
+commit 806ac592d38b7541b1d9004dc076108db9f63c16
+Author: Jiannan Zhang <jz1992@cs.utexas.edu>
+Date:   Thu Sep 25 18:56:44 2014 -0500
+
+    final commit
+
+commit be669048374d0757f499f8ecd81bba0ece0a9386
+Author: Jiannan Zhang <jz1992@cs.utexas.edu>
+Date:   Thu Sep 25 18:40:31 2014 -0500
+
+    final cool pydoc
+
+commit 59ad52ac0cdd86a28f5acf0b1e7b7229892ce705
+Author: Jiannan Zhang <jz1992@cs.utexas.edu>
+Date:   Thu Sep 25 17:59:15 2014 -0500
+
+    final commit
+
 commit fa7be7e04d06fc422b9ec6156c76a2676fc5fb08
 Author: Jiannan Zhang <jz1992@cs.utexas.edu>
 Date:   Thu Sep 25 16:52:28 2014 -0500
