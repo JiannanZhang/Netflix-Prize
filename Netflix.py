@@ -69,6 +69,7 @@ def netflixEval(r,w):
         pRlist.append(getPredictRating(movieID,userID))
     total = 0
     z = zip(aRList,pRlist)
+    # calc rmse
     for x,y in z:
         total += (float(x)-float(y))**2
     rmse = (total / len(aRList))  ** 0.5
