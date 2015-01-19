@@ -1,9 +1,9 @@
 import json
-# get prediction given mvId, userID
-# mvID and userID are strs
+# import the cache files my parter and I already created 
 userCacheDic = json.load(open('/u/prat0318/netflix-tests/ctd446-userAverageRating.txt','r'))
 movieCacheDic = json.load(open('/u/prat0318/netflix-tests/ctd446-movieAverageRating.txt','r'))
 
+# get a overall (global) average ratings for each user
 def getAveAllUsers(userCacheDic):
     sumRating = 0
     length = len(userCacheDic)
