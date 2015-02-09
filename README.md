@@ -1,2 +1,1 @@
-cs313e-netflix
-==============
+In this project, I used Python to generate a model to predict movie ratings based on the original training data from Netflix Company, which has 17,770 movies, 480,189 customers and 100 million ratings. The model has RMSE 0.97 and runtime less than 5 seconds on a one million testing dataset.
